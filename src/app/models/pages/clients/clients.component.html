@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="filter-bar"></div>
+  <div class="clients-list">
+    <div class="card" *ngFor="let c of clients">
+      <div class="image"></div>
+      <div class="client-data">
+        <div class="name">
+          <p>{{ c.name }}</p>
+        </div>
+        <div class="description">
+          <p>{{ c.description }}</p>
+        </div>
+      </div>
+      <div class="actions">
+        <button class="btn">
+          <img src="../../../../assets/icons/pencil.svg" alt="editar" />
+        </button>
+        <button class="btn" (click)="redirectToMaps(c.address)">
+          <img src="../../../../assets/icons/maps.svg" alt="localização" />
+        </button>
+        <button class="btn">
+          <img src="../../../../assets/icons/phone.svg" alt="telefone" />
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
